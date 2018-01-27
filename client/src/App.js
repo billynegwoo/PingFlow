@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import './App.css';
-import  instance  from './api'
+import {
+  Navbar,
+  NavbarGroup,
+  NavbarHeading,
+  Button,
+  NavbarDivider,
+} from "@blueprintjs/core";
+/*import instance from './api'
 import openSocket from 'socket.io-client';
-const socket = openSocket('http://localhost:3001');
+
+const socket = openSocket('http://localhost:3001');*/
 
 class App extends Component {
 
-  componentDidMount(){
-    instance.get('/');
-      socket.on('socketToMe', data => console.log(data))
-  }
   render() {
     return (
       <div className="App">
-
+        <Navbar>
+          <NavbarGroup>
+            <NavbarHeading>PingFlow</NavbarHeading>
+          </NavbarGroup>
+          <NavbarGroup align="right">
+            <Button className="pt-minimal" iconName="home">Home</Button>
+            <Button className="pt-minimal" iconName="document">Files</Button>
+          </NavbarGroup>
+        </Navbar>
       </div>
     );
   }
