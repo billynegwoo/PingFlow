@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+#client packages
+/server/node_modules
+
+#server packages
+/client/node_modules
