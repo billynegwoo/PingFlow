@@ -4,7 +4,7 @@ import {
   NavbarGroup,
   NavbarHeading,
   Button,
-  NavbarDivider,
+  EditableText
 } from "@blueprintjs/core";
 /*import instance from './api'
 import openSocket from 'socket.io-client';
@@ -21,8 +21,7 @@ class App extends Component {
             <NavbarHeading>PingFlow</NavbarHeading>
           </NavbarGroup>
           <NavbarGroup align="right">
-            <Button className="pt-minimal" iconName="home">Home</Button>
-            <Button className="pt-minimal" iconName="document">Files</Button>
+            <input className="pt-input" type="search"/>
           </NavbarGroup>
         </Navbar>
       </div>
