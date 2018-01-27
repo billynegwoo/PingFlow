@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const debug = require('debug')('untitled:server');
 const http = require('http');
-
+const models = require('./models');
 
 const index = require('./routes/index');
 
@@ -62,7 +62,12 @@ app.use(function(err, req, res, next) {
   res.json('error');
 });
 
-
+// sync() will create all table if they doesn't exist in database
+models.sequelize.sync().then(function () {
+    server.listen(port);
+    server.on('error', onError);
+    server.on('listening', onListening);
+});
 
 function normalizePort(val) {
     const port = parseInt(val, 10);
@@ -111,4 +116,5 @@ function onListening() {
         : 'port ' + addr.port;
     debug('Listening on ' + bind);
 }
+
 module.exports = app;
