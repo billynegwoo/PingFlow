@@ -34,7 +34,7 @@ class App extends Component {
             <MenuContainer handleChange={this.handleChange}/>
           </NavbarGroup>
         </Navbar>
-        { this.state.tab === 'mp' ? <MapContainer/> : <FavoritesContainer/> }
+        { this.state.tab === 'mp' ? <MapContainer /> : <FavoritesContainer/> }
       </div>
     );
   }
