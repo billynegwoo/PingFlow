@@ -5,6 +5,7 @@
   "dependencies": {
     "@blueprintjs/core": "^1.35.2",
     "axios": "^0.17.1",
+    "google-maps-react": "^1.1.2",
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2",
